@@ -1,10 +1,6 @@
 # Run the Application
+make sure you have npm and nodejs installed
 
-We have preconfigured the project with a simple development web server.  The simplest way to start
-this server is:
-
-```
-npm start
-```
+open a cmd window inside the project and type "npm start"
 
 Now browse to the app at `http://localhost:8000/index.html`.
