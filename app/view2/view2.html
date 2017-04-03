@@ -1,0 +1,27 @@
+<div class="container">
+	<h1>Review</h1>
+
+	<form name="myForm" ng-submit="createReview()">
+		<div class="row">
+			<div class="form-group col-md-6">
+				<label for="description">Description</label>
+				<input type="text" class="form-control" ng-model="review.description" name="description" required />
+			</div>
+			<div class="row">
+				<div class="form-group col-md-3">
+					<select ng-model="review.rating">
+					<option ng-value=""></option>
+					<option ng-value="1">1</option>
+					<option ng-value="2">2</option>
+					<option ng-value="3">3</option>
+					<option ng-value="4">4</option>
+					<option ng-value="5">5</option>
+				</select>
+				</div>
+			</div>
+		</div>
+
+		<input type="submit" class="btn btn-default" value="Review">
+
+	</form>
+</div>

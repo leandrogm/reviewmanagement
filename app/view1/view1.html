@@ -1,0 +1,34 @@
+<p>
+    <h1>Reviews</h1>
+</p>
+<div class="row">
+
+    <table class="table">
+        <thead>
+            <th>
+                <button ng-click="sortBy('description')">Description</button>
+                <span class="sortorder" ng-show="propertyName === 'description'" ng-class="{reverse: reverse}"></span>
+            </th>
+            <th>
+                <button ng-click="sortBy('rating')">Rating</button>
+                <span class="sortorder" ng-show="propertyName === 'rating'" ng-class="{reverse: reverse}"></span>
+            </th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="review in reviews.items | orderBy:propertyName:reverse">
+                <td>
+                    <span ng-bind="review.description"></span>
+                </td>
+                <td>
+                    <span ng-bind="review.rating"></span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="row">
+        <div class="form-group">
+            <button ng-repeat="page in reviews.pages" ng-click="paginate(page)">{{page}}</button>
+        </div>
+    </div>
+
+</div>
